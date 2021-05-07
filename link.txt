@@ -1,0 +1,7 @@
+https://www.webhostface.com/kb/knowledgebase/install-laravel-windows/
+https://www.youtube.com/watch?v=_E81YkUnxSM&t=1211s
+
+https://getcomposer.org/
+
+https://laravel.com/docs/7.x
+	composer create-project --prefer-dist laravel/laravel:^7.0 blog

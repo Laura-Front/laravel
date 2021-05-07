@@ -1,0 +1,53 @@
+//  Footer Styles
+.footer {
+  .footer-menu {
+    list-style: none;
+    margin: 0 -1.5625rem;
+    padding: 0;
+    font-size: 0;
+    line-height: 1.5;
+    li {
+      display: inline;
+    }
+    a {
+      display: inline-block;
+      font-family: Arimo,sans-serif;
+      text-transform: uppercase;
+      font-size: .75rem;
+      letter-spacing: .125rem;
+      font-weight: 700;
+      margin: 0 1.5625rem;
+      color: #c7cbd0;
+      transition: all .2s ease-in-out;
+      text-decoration: none;
+      background-color: transparent;
+      &:hover {
+        color: #ffc107;
+      }
+    }
+  }
+
+  .brand-icons-list {
+    display: -ms-flexbox;
+    display: flex;
+    margin: -.625rem;
+    .brand-icon {
+      margin: .625rem;
+      display: inline-flex;
+      width: 1em;
+      height: 1em;
+      vertical-align: middle;
+      font-size: 1.5rem;
+      -ms-flex-align: center;
+      align-items: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      transition: all .2s ease-in-out;
+      color: #c7cbd0;
+      text-decoration: none;
+      &:hover {
+        color: #ffc107;
+      }
+    }
+  }
+}
