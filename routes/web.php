@@ -17,9 +17,15 @@ use Illuminate\Support\Facades\Route;
 //    return view('site/home');
 //});
 
+//Route::post('contact/submit',function (){
+////   return 'Okay';
+//    dd(Request::all());
+//})->name('contact-form');
 
-Route::get('/', 'MainController@home');
-Route::get('about','MainController@about');
+
+Route::get('/', 'MainController@home')->name('home');
+Route::get('about','MainController@about')->name('about');
 
 Route::get('reviews','MainController@reviews');
 Route::post('reviews/check','MainController@reviews_check');
+Route::post('contact/submit','MainController@contact')->name('contact-form');

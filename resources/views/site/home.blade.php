@@ -95,41 +95,54 @@
                     <h1>Contact Us</h1></div>
                 <div class="row">
                     <div class="col-lg-8 offset-lg-2">
-                        <form action="#" class="row mt-17">
+
+                        @if ($errors->any())
+                            <div class="alert alert-danger">
+                                <ul>
+                                    @foreach ($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                         @endif
+
+                        <!-- Create Contact Form -->
+                        <form action="{{ route('contact-form') }}" method="post" class="row mt-17">
+                            @csrf
                             <div class="col-12 col-sm-6">
                                 <div class="form-group mb-3">
                                     <label for="first_name" class="form-label">First name</label>
-                                    <input type="text" class="form-control" id="first_name">
+                                    <input type="text" class="form-control" name="first_name" id="first_name">
                                 </div>
                             </div>
                             <div class="col-12 col-sm-6">
                                 <div class="form-group mb-3">
                                     <label for="last_name" class="form-label">Last name</label>
-                                    <input type="text" class="form-control" id="last_name">
+                                    <input type="text" class="form-control" name="last_name" id="last_name">
                                 </div>
                             </div>
                             <div class="col-12 col-sm-6">
                                 <div class="form-group mb-3">
                                     <label for="phone" class="form-label">Phone</label>
-                                    <input type="text" class="form-control" id="phone">
+                                    <input type="text" class="form-control" name="phone" id="phone">
                                 </div>
                             </div>
                             <div class="col-12 col-sm-6">
                                 <div class="form-group mb-3">
                                     <label for="email" class="form-label">Email</label>
-                                    <input  type="text" class="form-control" id="email">
+                                    <input  type="text" class="form-control" name="email" id="email">
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-group mb-3">
                                     <label for="message" class="form-label">Message</label>
-                                    <textarea id="message" class="form-control" rows="3"></textarea>
+                                    <textarea id="message" name="message" class="form-control" rows="3"></textarea>
                                 </div>
                             </div>
                             <div class="col-12 d-flex justify-content-between align-items-center flex-column flex-md-row">
                                 <div class="form-group form-check mb-9 mb-md-0 ps-0">
                                     <div class="form-check">
-                                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                        <input type="checkbox" class="form-check-input" id="terms_policy">
 
                                         <label class="form-check-label" for="exampleCheck1">
                                             I've read and agree with the <a href="#">Terms &amp; Policy</a>
