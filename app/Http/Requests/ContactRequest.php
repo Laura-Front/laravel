@@ -24,10 +24,9 @@ class ContactRequest extends FormRequest
     public function rules()
     {
         return [
-            'first_name' => 'required',
-            'last_name' => 'required',
+            'name' => 'required',
+            'subject' => 'required|min:20',
             'email' => 'required|email',
-            'phone' => 'required|regex:/(374)[0-9]{9}/',
             'message' => 'required|min:20|max:500',
         ];
     }
@@ -40,11 +39,10 @@ class ContactRequest extends FormRequest
     public function messages()
     {
         return [
-            'first_name.required' => 'Please enter your first name',
-            'last_name.required' => 'Please enter your last name',
-            'email.email' => 'Your email not valid',
-            'phone.regex' => 'The phone number starts with 374 and is followed by 9 numbers',
-            'phone.required' => 'Please enter your phone number',
+            'name.required' => 'Please enter your name.',
+            'email.email' => 'Your email not valid.',
+            'message.required' => 'Please enter your message text.',
+            'subject.required' => 'Please enter subject message.',
         ];
     }
 

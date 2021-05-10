@@ -28,4 +28,8 @@ Route::get('about','MainController@about')->name('about');
 
 Route::get('reviews','MainController@reviews');
 Route::post('reviews/check','MainController@reviews_check');
-Route::post('contact/submit','MainController@contact')->name('contact-form');
+
+Route::get('contact','ContactController@contact')->name('contact');
+Route::get('contact/data','ContactController@selectData')->name('contact-data');
+Route::get('contact/data/{id}','ContactController@showOneData')->name('contact-data-show-one');
+Route::post('contact/submit','ContactController@contactForm')->name('contact-form');

@@ -11,7 +11,8 @@
 
     <!-- Begin page content -->
     <main class="flex-shrink-0">
-        <div class="container">
+        <div class="container py-5">
+            @include('site.inc.messages')
             @yield('content')
         </div>
     </main>

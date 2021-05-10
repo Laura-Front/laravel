@@ -86,91 +86,13 @@
             </div>
         </div>
     </section>
-
-    <section id="contacts" class="my-5">
-        <div class="bg-light py-4">
-            <div class="section-content container">
-                <div class="text-center">
-                    <small class="font-family-secondary text-uppercase font-weight-bold letter-spacing-caption text-muted">We answer within 24 hours</small>
-                    <h1>Contact Us</h1></div>
-                <div class="row">
-                    <div class="col-lg-8 offset-lg-2">
-
-                        @if ($errors->any())
-                            <div class="alert alert-danger">
-                                <ul>
-                                    @foreach ($errors->all() as $error)
-                                        <li>{{ $error }}</li>
-                                    @endforeach
-                                </ul>
-                            </div>
-                         @endif
-
-                        <!-- Create Contact Form -->
-                        <form action="{{ route('contact-form') }}" method="post" class="row mt-17">
-                            @csrf
-                            <div class="col-12 col-sm-6">
-                                <div class="form-group mb-3">
-                                    <label for="first_name" class="form-label">First name</label>
-                                    <input type="text" class="form-control" name="first_name" id="first_name">
-                                </div>
-                            </div>
-                            <div class="col-12 col-sm-6">
-                                <div class="form-group mb-3">
-                                    <label for="last_name" class="form-label">Last name</label>
-                                    <input type="text" class="form-control" name="last_name" id="last_name">
-                                </div>
-                            </div>
-                            <div class="col-12 col-sm-6">
-                                <div class="form-group mb-3">
-                                    <label for="phone" class="form-label">Phone</label>
-                                    <input type="text" class="form-control" name="phone" id="phone">
-                                </div>
-                            </div>
-                            <div class="col-12 col-sm-6">
-                                <div class="form-group mb-3">
-                                    <label for="email" class="form-label">Email</label>
-                                    <input  type="text" class="form-control" name="email" id="email">
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-group mb-3">
-                                    <label for="message" class="form-label">Message</label>
-                                    <textarea id="message" name="message" class="form-control" rows="3"></textarea>
-                                </div>
-                            </div>
-                            <div class="col-12 d-flex justify-content-between align-items-center flex-column flex-md-row">
-                                <div class="form-group form-check mb-9 mb-md-0 ps-0">
-                                    <div class="form-check">
-                                        <input type="checkbox" class="form-check-input" id="terms_policy">
-
-                                        <label class="form-check-label" for="exampleCheck1">
-                                            I've read and agree with the <a href="#">Terms &amp; Policy</a>
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="form-group my-3">
-                                    <button class="btn btn-primary btn-lg">Send message</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 @endsection
 
 
 @section('page-scripts')
 
     <script>
-        $('#contact').click(function () {
-            $('html, body').animate({
-                scrollTop: $("#contacts").offset().top
-            }, 1000);
 
-        })
     </script>
 
 @endsection

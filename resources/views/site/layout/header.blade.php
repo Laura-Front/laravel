@@ -6,9 +6,9 @@
             <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
                 <li><a href="reviews" class="nav-link px-2 text-white">Reviews</a></li>
                 <li><a href="pricing" class="nav-link px-2 text-white">Pricing</a></li>
-                <li><a href="faqs" class="nav-link px-2 text-white">FAQs</a></li>
+                <li><a href="{{ route('contact-data') }}" class="nav-link px-2 text-white">Messages</a></li>
                 <li><a href="{{ route('about') }}" class="nav-link px-2 text-white">About Us</a></li>
-                <li><a href="javascript:;" class="nav-link px-2 text-white" id="contact">Contact</a></li>
+                <li><a href="{{ route('contact')}}" class="nav-link px-2 text-white">Contact</a></li>
             </ul>
 
             <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
