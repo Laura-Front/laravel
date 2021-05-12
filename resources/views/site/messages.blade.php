@@ -12,7 +12,7 @@
                         <h3 class="mb-3">{{ $data_item->subject }}</h3>
                         <p>{{ $data_item->email }}</p>
                         <p><small>{{ $data_item->created_at }}</small></p>
-                        <a href="{{ route('contact-data-show-one') }}" class="btn btn-primary">Details</a>
+                        <a href="{{ route('contact-data-show-one', $data_item->id) }}" class="btn btn-primary">Details</a>
                     </div>
                 @endforeach
             </div>

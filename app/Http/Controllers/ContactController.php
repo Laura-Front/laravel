@@ -60,7 +60,16 @@ class ContactController extends Controller {
     }
 
     // Show only One data(message)
-    public function showOneData() {
-
+    public function showOneData($id) {
+        $contact = new Contact();
+        return view('site.message', ['data' => $contact->find($id)]);
     }
+
+    // Update data(message)
+    public function updateOneData($id) {
+        $contact = new Contact();
+        return view('site.update_message', ['data' => $contact->find($id)]);
+    }
+
+
 }

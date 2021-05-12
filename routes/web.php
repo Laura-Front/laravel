@@ -32,4 +32,5 @@ Route::post('reviews/check','MainController@reviews_check');
 Route::get('contact','ContactController@contact')->name('contact');
 Route::get('contact/data','ContactController@selectData')->name('contact-data');
 Route::get('contact/data/{id}','ContactController@showOneData')->name('contact-data-show-one');
+Route::get('contact/data/{id}/update','ContactController@updateOneData')->name('contact-data-update');
 Route::post('contact/submit','ContactController@contactForm')->name('contact-form');
