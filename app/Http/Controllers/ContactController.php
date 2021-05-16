@@ -26,8 +26,8 @@ class ContactController extends Controller {
 //        dd($request->input('first_name'));
 
 //        $request->validate([
-//            'first_name' => 'required|min:5|max:15',
-//            'message' => 'required|min:20|max:500',
+//            'name' => 'required|min:5|max:15',
+//            'subject' => 'required|min:20',
 //        ]);
 
 
@@ -70,6 +70,23 @@ class ContactController extends Controller {
         $contact = new Contact();
         return view('site.update_message', ['data' => $contact->find($id)]);
     }
+    public function updateOneDataSubmit($id,ContactRequest $request) {
+        $contact = Contact::find($id);
+        $contact->name = $request->input('name');
+        $contact->email = $request->input('email');
+        $contact->message = $request->input('message');
+        $contact->subject = $request->input('subject');
+        $contact->save();
+
+        return redirect()->route('contact-data-show-one',$id)->with('success','Your message has been successfully update.');
+    }
+
+    // Delete data (message)
+    public function updateOneDataDelete($id){
+        Contact::find($id)->delete();
+        return redirect()->route('contact-data',$id)->with('success','Your message has been deleted.');
+    }
+
 
 
 }

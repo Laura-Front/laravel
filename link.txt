@@ -5,3 +5,13 @@ https://getcomposer.org/
 
 https://laravel.com/docs/7.x
 	composer create-project --prefer-dist laravel/laravel:^7.0 blog
+
+1.Creat new controller
+    php artisan make:controller PhotoController
+
+2.Creat new validation request
+    php artisan make:request PhotoRequest
+
+3.Creat new model
+    php artisan make:model Photo
+    php artisan make:model Photo --migration(or -m)

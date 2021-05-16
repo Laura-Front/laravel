@@ -9,10 +9,10 @@
                 <h1 class="mb-4 fw-bold"> {{ $data->subject }} </h1>
                 <div class="alert alert-info">
                     <p class="mb-3">{{ $data->message }}</p>
-                    <p>{{ $data->email }}</p>
+                    <p>{{ $data->email }} - {{ $data->name }}</p>
                     <p><small>{{ $data->created_at }}</small></p>
                     <a href="{{ route('contact-data-update', $data->id) }}" class="btn btn-primary">Update</a>
-                    <a href="{{ route('contact-data-show-one', $data->id) }}" class="btn btn-primary">Delate</a>
+                    <a href="{{ route('contact-data-delete', $data->id) }}" class="btn btn-danger">Delete</a>
                 </div>
 
             </div>

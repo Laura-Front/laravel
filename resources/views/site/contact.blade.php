@@ -11,9 +11,6 @@
                     <h1>Contact Us</h1></div>
                 <div class="row">
                     <div class="col-lg-8 offset-lg-2">
-
-
-
                         <!-- Create Contact Form -->
                         <form action="{{ route('contact-form') }}" method="post" class="row mt-17">
                             @csrf
@@ -38,7 +35,7 @@
                             <div class="col-12">
                                 <div class="form-group mb-3">
                                     <label for="message" class="form-label">Message</label>
-                                    <textarea id="message" name="message" class="form-control" rows="3" value="{{ old('message') }}"></textarea>
+                                    <textarea id="message" name="message" class="form-control" rows="3"></textarea>
                                 </div>
                             </div>
                             <div class="col-12">

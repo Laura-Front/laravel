@@ -20,12 +20,4 @@ class MainController extends Controller {
         return view('site.about');
     }
 
-    public function reviews(){
-        return view('site.reviews');
-    }
-
-    public function reviews_check(Request $request){
-        dd($request->all());
-    }
-
 }

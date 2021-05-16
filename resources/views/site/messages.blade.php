@@ -10,7 +10,7 @@
                 @foreach( $data as $data_item)
                     <div class="alert alert-info">
                         <h3 class="mb-3">{{ $data_item->subject }}</h3>
-                        <p>{{ $data_item->email }}</p>
+                        <p>{{ $data_item->email }} - {{ $data_item->name }}</p>
                         <p><small>{{ $data_item->created_at }}</small></p>
                         <a href="{{ route('contact-data-show-one', $data_item->id) }}" class="btn btn-primary">Details</a>
                     </div>
