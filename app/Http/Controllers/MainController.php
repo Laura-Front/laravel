@@ -8,6 +8,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Staffinfo;
 use Illuminate\Http\Request;
 
 class MainController extends Controller {
@@ -17,7 +18,20 @@ class MainController extends Controller {
     }
 
     public function about(){
-        return view('site.about');
+//        $staffs = Staffinfo::all();
+//        $staffs = Staffinfo::orderBy('name')->get();
+        $staffs = Staffinfo::orderBy('name')->paginate(10);
+//        dd($staffs);
+        return view('site.about',compact('staffs'));
+    }
+
+    public function search(Request $request){
+//        $s = $_GET['s'];
+        $s = $request->s;
+//        dd($s);
+//        $staffs = Staffinfo::query()->where('name', 'LIKE', "%{$s}%")->orderBy('name')->paginate(10);
+        $staffs = Staffinfo::where('name', 'LIKE', "%{$s}%")->orderBy('name')->paginate(10);
+        return view('site.about',compact('staffs'));
     }
 
 }

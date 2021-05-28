@@ -3,6 +3,7 @@
 @section('title') Home Page @endsection
 
 @section('content')
+    {{--<h1>{{  $test }}</h1>--}}
     <section class="section py-5 my-5">
         <div class="text-center">
             <small class="font-family-secondary text-uppercase font-weight-bold letter-spacing-caption text-muted">

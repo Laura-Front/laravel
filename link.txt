@@ -15,3 +15,14 @@ https://laravel.com/docs/7.x
 3.Creat new model
     php artisan make:model Photo
     php artisan make:model Photo --migration(or -m)
+    php artisan migrate
+
+https://www.youtube.com/watch?v=dl54waN5lWM&list=PLD-piGJ3Dtl3hkjrhimdJ0gO8s0pJPeAY
+
+4.Creat new seeder,factory, and run
+    php artisan make:seeder StaffinfoSeeder
+    php artisan make:factory StaffinfoFactory -m Staffinfo
+    php artisan db:seed --class=StaffinfoSeeder
+
+5.PHP Faker
+    https://github.com/fzaninotto/Faker

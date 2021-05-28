@@ -12,10 +12,14 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+/*
 
-//Route::get('/', function () {
-//    return view('site/home');
-//});
+Route::get('/', function () {
+  $test = 'Hello World';
+  return view('site/home',compact('test'));
+});
+
+*/
 
 //Route::post('contact/submit',function (){
 ////   return 'Okay';
@@ -25,6 +29,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'MainController@home')->name('home');
 Route::get('about','MainController@about')->name('about');
+Route::get('search','MainController@search')->name('search');
 
 Route::get('contact','ContactController@contact')->name('contact');
 Route::get('contact/data','ContactController@selectData')->name('contact-data');
