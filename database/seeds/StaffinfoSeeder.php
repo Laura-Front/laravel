@@ -11,6 +11,6 @@ class StaffinfoSeeder extends Seeder
      */
     public function run()
     {
-       factory(\App\Staffinfo::class,50)->create();
+       factory(\App\Models\Staffinfo::class,50)->create();
     }
 }

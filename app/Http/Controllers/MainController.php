@@ -8,7 +8,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Staffinfo;
+use App\Models\Staffinfo;
 use Illuminate\Http\Request;
 
 class MainController extends Controller {
