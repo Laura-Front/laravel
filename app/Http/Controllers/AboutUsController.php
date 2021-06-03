@@ -11,11 +11,7 @@ namespace App\Http\Controllers;
 use App\Models\Staffinfo;
 use Illuminate\Http\Request;
 
-class MainController extends Controller {
-
-    public function home(){
-        return view('site.home');
-    }
+class AboutUsController extends Controller {
 
     public function about(){
 //        $staffs = Staffinfo::all();

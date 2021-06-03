@@ -26,3 +26,8 @@ https://www.youtube.com/watch?v=dl54waN5lWM&list=PLD-piGJ3Dtl3hkjrhimdJ0gO8s0pJP
 
 5.PHP Faker
     https://github.com/fzaninotto/Faker
+
+6.Authentication(Frontend Scaffolding)
+    composer require laravel/ui:^2.4
+    php artisan ui vue --auth
+    php artisan migrate

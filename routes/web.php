@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -26,10 +27,12 @@ Route::get('/', function () {
 //    dd(Request::all());
 //})->name('contact-form');
 
+Auth::routes();
 
-Route::get('/', 'MainController@home')->name('home');
-Route::get('about','MainController@about')->name('about');
-Route::get('search','MainController@search')->name('search');
+
+Route::get('/', 'HomeController@index')->name('home');
+Route::get('about','AboutUsController@about')->name('about');
+Route::get('search','AboutUsController@search')->name('search');
 
 Route::get('contact','ContactController@contact')->name('contact');
 Route::get('contact/data','ContactController@selectData')->name('contact-data');
@@ -38,3 +41,5 @@ Route::get('contact/data/{id}/update','ContactController@updateOneData')->name('
 Route::post('contact/data/{id}/update','ContactController@updateOneDataSubmit')->name('contact-data-update-submit');
 Route::get('contact/data/{id}/delete','ContactController@updateOneDataDelete')->name('contact-data-delete');
 Route::post('contact/submit','ContactController@contactForm')->name('contact-form');
+
+

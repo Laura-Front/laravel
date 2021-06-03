@@ -12,7 +12,8 @@
             <h1 class="mb-4">PROFI Contractors</h1>
             <div class="row no-gutters mt-6 mt-md-10 mt-lg-17">
                 <div class="col-12 col-lg-10 offset-0 offset-lg-1">
-                    <p class="fs-5 mb-5">This is a great space to write long text about your
+                    <p class="fs-5 mb-5">
+                        This is a great space to write long text about your
                         company and your services. You can use this space to go into a little more detail about your
                         company. Talk about your team and what services you provide. Tell your visitors the story of how
                         you
