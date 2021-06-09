@@ -12,4 +12,7 @@ class Contact extends Model
 
     // only the field names inside the array can be mass-assign
     // protected $fillable = ['name','subject','message'];
+
+//    protected $table = 'posts';    //   When we want use an other table 'posts'
+
 }

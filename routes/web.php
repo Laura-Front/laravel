@@ -27,6 +27,11 @@ Route::get('/', function () {
 //    dd(Request::all());
 //})->name('contact-form');
 
+
+Route::get('/session/get', 'SessionController@getSessionData');
+Route::get('/session/set', 'SessionController@setSessionData');
+Route::get('/session/remove', 'SessionController@unsetSessionData');
+
 Auth::routes();
 
 

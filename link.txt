@@ -1,8 +1,21 @@
 https://www.webhostface.com/kb/knowledgebase/install-laravel-windows/
 https://www.youtube.com/watch?v=_E81YkUnxSM&t=1211s
 
-https://getcomposer.org/
+1)Laravel 7 Tutorial
+    https://www.youtube.com/watch?v=ObtyOsLUDUI&list=PLz_YkiqIHesuumMuXkEzpevrnnErRM_MM&index=3
 
+2)Laravel CRUD IN english
+    https://www.youtube.com/watch?v=5J030MFFTc0&list=PLB1ippj6b9eleZrk5zT8Jx3fdF2ZnrNzY
+    https://www.youtube.com/watch?v=F2bOKt_E4QQ
+
+3)CMS (Content Management System _ Admin Panel)
+    https://www.youtube.com/watch?v=wW84MmffxyE&list=PLxFwlLOncxFLazmEPiB4N0iYc3Dwst6m4
+    https://www.youtube.com/watch?v=b-A9GKQZIe0&list=PLvItDmb0sZw-ILLDjWSOgas3S3QN_L53I
+
+
+ /////          ************************        /////
+
+https://getcomposer.org/
 https://laravel.com/docs/7.x
 	composer create-project --prefer-dist laravel/laravel:^7.0 blog
 
@@ -22,7 +35,15 @@ https://www.youtube.com/watch?v=dl54waN5lWM&list=PLD-piGJ3Dtl3hkjrhimdJ0gO8s0pJP
 4.Creat new seeder,factory, and run
     php artisan make:seeder StaffinfoSeeder
     php artisan make:factory StaffinfoFactory -m Staffinfo
-    php artisan db:seed --class=StaffinfoSeeder
+
+        php artisan db:seed --class=StaffinfoSeeder
+
+        OR
+
+        // Add your seeders in DataBaseSeeder.php
+        php artisan db:seed
+
+    php artisan migrate:rollback --step=1
 
 5.PHP Faker
     https://github.com/fzaninotto/Faker

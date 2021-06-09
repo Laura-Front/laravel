@@ -18,18 +18,27 @@
                                 <div class="form-group mb-3">
                                     <label for="name" class="form-label">Full name</label>
                                     <input type="text" class="form-control" name="name" id="name" value="{{ old('name') }}">
+                                    @error('name')
+                                        <small class="text-danger">{{ $message }}</small>
+                                    @enderror
                                 </div>
                             </div>
                             <div class="col-12 col-sm-6">
                                 <div class="form-group mb-3">
                                     <label for="email" class="form-label">Email</label>
                                     <input  type="text" class="form-control" name="email" id="email" value="{{ old('email') }}">
+                                    @if ($errors->has('email'))
+                                        <strong><small class="text-danger">{{ $errors->first('email') }}</small></strong>
+                                    @endif
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-group mb-3">
                                     <label for="subject" class="form-label">Message subject</label>
                                     <input type="text" class="form-control" name="subject" id="subject" value="{{ old('subject') }}">
+                                    @error('subject')
+                                        <small class="text-danger">{{ $message }}</small>
+                                    @enderror
                                 </div>
                             </div>
                             <div class="col-12">
@@ -40,7 +49,7 @@
                             </div>
                             <div class="col-12">
                                 <div class="form-group my-3">
-                                    <button class="btn btn-primary btn-lg">Send message</button>
+                                    <button class="btn btn-primary btn-lg" type="submit">Send message</button>
                                 </div>
                             </div>
                         </form>

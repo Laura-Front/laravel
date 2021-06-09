@@ -12,12 +12,24 @@ use App\Models\Staffinfo;
 use Illuminate\Http\Request;
 
 class AboutUsController extends Controller {
+/*
+    public function index(Request $req)
+    {
+        return $req->method();   // GET
+        return $req->path();    //  about
+        return $req->url();     //  http://laravel.loc/about
+        return $req->fullUrl(); //  http://laravel.loc/about?pag=2&id=21
+    }
+
+*/
+
 
     public function about(){
 //        $staffs = Staffinfo::all();
 //        $staffs = Staffinfo::orderBy('name')->get();
         $staffs = Staffinfo::orderBy('name')->paginate(10);
 //        dd($staffs);
+//        return view('site.about')->with('staffs' , $staffs);
         return view('site.about',compact('staffs'));
     }
 
