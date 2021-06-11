@@ -37,6 +37,17 @@ class ContactController extends Controller {
         $contact->email = $request->input('email');
         $contact->message = $request->input('message');
         $contact->subject = $request->input('subject');
+
+        if($request->hasFile('avatar')) {
+            // $img_org_name = $request->file('avatar')->getClientOriginalName();
+            $img_org_name = $request->file('avatar')->hashName();
+            $img_destination_path = 'public/images/upload';
+//            $request->file('avatar')->move(public_path() . $img_destination_path, $img_org_name);
+            $request->file('avatar')->storeAs($img_destination_path,$img_org_name);
+        }else {
+            $img_org_name = 'default.png';
+        }
+        $contact->image = $img_org_name;
         $contact->save();
 
         return redirect()->route('home')->with('success','Your message has been successfully sent.');
@@ -76,6 +87,17 @@ class ContactController extends Controller {
         $contact->email = $request->input('email');
         $contact->message = $request->input('message');
         $contact->subject = $request->input('subject');
+
+        if($request->hasFile('avatar')) {
+            $img_org_name = $request->file('avatar')->hashName();
+            $img_destination_path = 'public/images/upload';
+            $request->file('avatar')->storeAs($img_destination_path,$img_org_name);
+        }else {
+            $img_org_name = 'default.png';
+        }
+
+        $contact->image = $img_org_name;
+
         $contact->save();
 
         return redirect()->route('contact-data-show-one',$id)->with('success','Your message has been successfully update.');

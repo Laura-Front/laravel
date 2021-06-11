@@ -8,6 +8,9 @@
             <div class="col-8">
                 <h1 class="mb-4 fw-bold"> {{ $data->subject }} </h1>
                 <div class="alert alert-info">
+                    <div style="width: 100px; margin-bottom: 20px;">
+                        <img src="{{ asset('storage/images/upload/'.$data->image) }}" alt="">
+                    </div>
                     <p class="mb-3">{{ $data->message }}</p>
                     <p>{{ $data->email }} - {{ $data->name }}</p>
                     <p><small>{{ $data->created_at }}</small></p>

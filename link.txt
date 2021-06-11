@@ -6,7 +6,6 @@ https://www.youtube.com/watch?v=_E81YkUnxSM&t=1211s
 
 2)Laravel CRUD IN english
     https://www.youtube.com/watch?v=5J030MFFTc0&list=PLB1ippj6b9eleZrk5zT8Jx3fdF2ZnrNzY
-    https://www.youtube.com/watch?v=F2bOKt_E4QQ
 
 3)CMS (Content Management System _ Admin Panel)
     https://www.youtube.com/watch?v=wW84MmffxyE&list=PLxFwlLOncxFLazmEPiB4N0iYc3Dwst6m4
@@ -29,6 +28,8 @@ https://laravel.com/docs/7.x
     php artisan make:model Photo
     php artisan make:model Photo --migration(or -m)
     php artisan migrate
+    php artisan make:migration add_image_to_contacts_table
+
 
 https://www.youtube.com/watch?v=dl54waN5lWM&list=PLD-piGJ3Dtl3hkjrhimdJ0gO8s0pJPeAY
 
@@ -52,3 +53,6 @@ https://www.youtube.com/watch?v=dl54waN5lWM&list=PLD-piGJ3Dtl3hkjrhimdJ0gO8s0pJP
     composer require laravel/ui:^2.4
     php artisan ui vue --auth
     php artisan migrate
+
+7.Upload files
+    php artisan storage:link

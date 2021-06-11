@@ -1,6 +1,6 @@
 @extends('site.layout.default')
 
-@section('title') Home Page @endsection
+@section('title') Lravel Contact Page @endsection
 
 @section('content')
     <section id="contacts" class="my-5">
@@ -12,14 +12,14 @@
                 <div class="row">
                     <div class="col-lg-8 offset-lg-2">
                         <!-- Create Contact Form -->
-                        <form action="{{ route('contact-form') }}" method="post" class="row mt-17">
+                        <form action="{{ route('contact-form') }}" method="post" class="row mt-17" enctype="multipart/form-data">
                             @csrf
                             <div class="col-12 col-sm-6">
                                 <div class="form-group mb-3">
                                     <label for="name" class="form-label">Full name</label>
                                     <input type="text" class="form-control" name="name" id="name" value="{{ old('name') }}">
                                     @error('name')
-                                        <small class="text-danger">{{ $message }}</small>
+                                        <strong><small class="text-danger">{{ $message }}</small></strong>
                                     @enderror
                                 </div>
                             </div>
@@ -32,12 +32,21 @@
                                     @endif
                                 </div>
                             </div>
-                            <div class="col-12">
+                            <div class="col-12 col-sm-6">
                                 <div class="form-group mb-3">
                                     <label for="subject" class="form-label">Message subject</label>
                                     <input type="text" class="form-control" name="subject" id="subject" value="{{ old('subject') }}">
                                     @error('subject')
-                                        <small class="text-danger">{{ $message }}</small>
+                                        <strong><small class="text-danger">{{ $message }}</small></strong>
+                                    @enderror
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <div class="form-group mb-3">
+                                    <label for="subject" class="form-label">Your avatar</label>
+                                    <input type="file" class="form-control" name="avatar" id="avatar">
+                                    @error('avatar')
+                                     <strong><small class="text-danger">{{ $message }}</small></strong>
                                     @enderror
                                 </div>
                             </div>
@@ -45,6 +54,9 @@
                                 <div class="form-group mb-3">
                                     <label for="message" class="form-label">Message</label>
                                     <textarea id="message" name="message" class="form-control" rows="3"></textarea>
+                                    @error('message')
+                                    <strong><small class="text-danger">{{ $message }}</small></strong>
+                                    @enderror
                                 </div>
                             </div>
                             <div class="col-12">

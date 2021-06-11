@@ -11,8 +11,13 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-         $this->call(CurrenciesSeeder::class);
-         $this->call(StaffinfoSeeder::class);
+         $this->call([
+             CurrenciesSeeder::class,
+             StaffinfoSeeder::class
+         ]);
+
+//         $this->call(CurrenciesSeeder::class);
+//         $this->call(StaffinfoSeeder::class);
 //         $this->call(UserSeeder::class);
     }
 }

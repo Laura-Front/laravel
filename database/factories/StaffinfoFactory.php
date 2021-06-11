@@ -2,7 +2,7 @@
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
-use App\Models\Staffinfo;
+use \App\Models\Staffinfo;
 use Faker\Generator as Faker;
 
 $factory->define(Staffinfo::class, function (Faker $faker) {
@@ -14,3 +14,4 @@ $factory->define(Staffinfo::class, function (Faker $faker) {
         'updated_at' => $faker->dateTime(),
     ];
 });
+

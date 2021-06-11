@@ -1,6 +1,6 @@
 @extends('site.layout.default')
 
-@section('title') Contact messages @endsection
+@section('title') Laravel Contact messages @endsection
 
 @section('content')
     <section class="section my-5">

@@ -24,10 +24,11 @@ class ContactRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required',
+            'name' => 'required|min:5',
             'subject' => 'required|min:20',
             'email' => 'required|email',
             'message' => 'required|min:20|max:500',
+            'avatar' => 'image|mimes:jpeg,png,jpg|max:4096',
         ];
     }
 
@@ -43,6 +44,8 @@ class ContactRequest extends FormRequest
             'email.email' => 'Your email not valid.',
             'message.required' => 'Please enter your message text.',
             'subject.required' => 'Please enter subject message.',
+            'avatar.mimes' => 'Only jpeg,png,jpg are allowed.',
+            'avatar.max' => 'You can upload image only up to 4 MB.'
         ];
     }
 
