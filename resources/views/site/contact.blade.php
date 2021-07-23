@@ -7,8 +7,8 @@
         <div class="bg-light py-4">
             <div class="section-content">
                 <div class="text-center">
-                    <small class="font-family-secondary text-uppercase font-weight-bold letter-spacing-caption text-muted">We answer within 24 hours</small>
-                    <h1>Contact Us</h1></div>
+                    <small class="font-family-secondary text-uppercase font-weight-bold letter-spacing-caption text-muted">{{ __('main.we_answer_within_24_hours') }}</small>
+                    <h1>{{ __('main.contact_us') }}</h1></div>
                 <div class="row">
                     <div class="col-lg-8 offset-lg-2">
                         <!-- Create Contact Form -->
@@ -16,7 +16,7 @@
                             @csrf
                             <div class="col-12 col-sm-6">
                                 <div class="form-group mb-3">
-                                    <label for="name" class="form-label">Full name</label>
+                                    <label for="name" class="form-label">{{ __('main.full_name') }}</label>
                                     <input type="text" class="form-control" name="name" id="name" value="{{ old('name') }}">
                                     @error('name')
                                         <strong><small class="text-danger">{{ $message }}</small></strong>
@@ -25,7 +25,7 @@
                             </div>
                             <div class="col-12 col-sm-6">
                                 <div class="form-group mb-3">
-                                    <label for="email" class="form-label">Email</label>
+                                    <label for="email" class="form-label">{{ __('main.email') }}</label>
                                     <input  type="text" class="form-control" name="email" id="email" value="{{ old('email') }}">
                                     @if ($errors->has('email'))
                                         <strong><small class="text-danger">{{ $errors->first('email') }}</small></strong>
@@ -34,7 +34,7 @@
                             </div>
                             <div class="col-12 col-sm-6">
                                 <div class="form-group mb-3">
-                                    <label for="subject" class="form-label">Message subject</label>
+                                    <label for="subject" class="form-label">{{ __('main.message_subject') }}</label>
                                     <input type="text" class="form-control" name="subject" id="subject" value="{{ old('subject') }}">
                                     @error('subject')
                                         <strong><small class="text-danger">{{ $message }}</small></strong>
@@ -43,7 +43,7 @@
                             </div>
                             <div class="col-12 col-sm-6">
                                 <div class="form-group mb-3">
-                                    <label for="subject" class="form-label">Your avatar</label>
+                                    <label for="subject" class="form-label">{{ __('main.your_avatar') }}</label>
                                     <input type="file" class="form-control" name="avatar" id="avatar">
                                     @error('avatar')
                                      <strong><small class="text-danger">{{ $message }}</small></strong>
@@ -52,7 +52,7 @@
                             </div>
                             <div class="col-12">
                                 <div class="form-group mb-3">
-                                    <label for="message" class="form-label">Message</label>
+                                    <label for="message" class="form-label">{{ __('main.message') }}</label>
                                     <textarea id="message" name="message" class="form-control" rows="3"></textarea>
                                     @error('message')
                                     <strong><small class="text-danger">{{ $message }}</small></strong>
@@ -61,7 +61,7 @@
                             </div>
                             <div class="col-12">
                                 <div class="form-group my-3">
-                                    <button class="btn btn-primary btn-lg" type="submit">Send message</button>
+                                    <button class="btn btn-primary btn-lg" type="submit">{{ __('main.send_message') }}</button>
                                 </div>
                             </div>
                         </form>

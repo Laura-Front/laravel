@@ -1,10 +1,15 @@
 https://www.webhostface.com/kb/knowledgebase/install-laravel-windows/
 https://www.youtube.com/watch?v=_E81YkUnxSM&t=1211s
 
+Russian
+    Laravel all leassons
+    https://www.youtube.com/c/rdavydov/search?query=laravel
+
 1)Laravel 7 Tutorial
     https://www.youtube.com/watch?v=ObtyOsLUDUI&list=PLz_YkiqIHesuumMuXkEzpevrnnErRM_MM&index=3
 
 2)Laravel CRUD IN english
+    https://codingdriver.com/laravel-7-crud-example-tutorial-for-beginners.html
     https://www.youtube.com/watch?v=5J030MFFTc0&list=PLB1ippj6b9eleZrk5zT8Jx3fdF2ZnrNzY
 
 3)CMS (Content Management System _ Admin Panel)
@@ -47,12 +52,26 @@ https://www.youtube.com/watch?v=dl54waN5lWM&list=PLD-piGJ3Dtl3hkjrhimdJ0gO8s0pJP
     php artisan migrate:rollback --step=1
 
 5.PHP Faker
+    https://www.itsolutionstuff.com/post/laravel-7-database-seeder-exampleexample.html
     https://github.com/fzaninotto/Faker
 
 6.Authentication(Frontend Scaffolding)
+    https://www.itsolutionstuff.com/post/laravel-6-auth-login-with-username-or-email-tutorialexample.html
     composer require laravel/ui:^2.4
     php artisan ui vue --auth
     php artisan migrate
 
 7.Upload files
+    https://www.itsolutionstuff.com/post/laravel-6-file-upload-tutorial-exampleexample.html
     php artisan storage:link
+
+8.Multilingual in Laravel (Localization)
+    https://www.itsolutionstuff.com/post/how-to-create-multilingual-website-in-laravelexample.html
+    Andre Madarang
+        https://www.youtube.com/watch?v=KqzGKg8IxE4
+    https://www.youtube.com/watch?v=lEccoYhzyos
+    Russian
+        https://www.youtube.com/watch?v=h4scDvdK5Pc
+        {{ __('Home Page') }}
+        @lang('Home Page')
+        php artisan make:middleware SetLanguage

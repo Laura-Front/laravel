@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\App;
+
 class HomeController extends Controller
 {
     /**
@@ -23,5 +25,18 @@ class HomeController extends Controller
     public function index()
     {
         return view('site.home');
+    }
+
+    public function locale($locale)
+    {
+        if( !in_array($locale,['en','hy'])){
+            $locale =  config('app.locale');
+        }
+//        Session::put('locale', $locale);
+        session(['locale'=> $locale]);
+
+        App::setLocale($locale);
+//        dd(App::getLocale());
+        return redirect()->back();
     }
 }

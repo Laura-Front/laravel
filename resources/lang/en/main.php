@@ -1,0 +1,55 @@
+<?php
+
+return [
+      "profi_contractors"=>"PROFI Contractors",
+      "profi_contractors_text"=>"This is a great space to write long text about your\n company and your services. You can use this space to go into a little more detail about your\n company. Talk about your team and what services you provide. Tell your visitors the story of how\nyou came up with the idea for your business and what makes you different from your competitors.",
+      "general_contractors_in_new_york"=>"general contractors in new york",
+      "wildfires_text"=>"Wildfires can burn millions of acres of land at shockingly fast speeds, consuming everything in their paths. These rolling flames travel up to 14 miles an hour, which converts to about a four-minute-mile pace, and can overtake the average human in minutes.In 2020, the wildfire season in the United States—which lasts from June through September—promises to be particularly devastating. This summer is expected to be the hottest on record, with drought conditions predicted in California through September. In addition, the COVID-19 pandemic has derailed mitigation efforts—such as homeowner assistance programs and controlled burns—due to concerns over social distancing and respiratory dangers. By the end of June, the California Department of Forestry and Fire Protection had responded to nearly double the number of fires than it had in the entire 2019 season.",
+      "footer" => [
+          "privacy_policy"=>"Privacy Policy",
+          "terms_&_conditions"=>"Terms & Conditions"
+      ],
+      "header" => [
+          "about_us"=>"About Us",
+          "contact"=>"Contact",
+          "messages"=>"Messages",
+          "login"=>"Login",
+          "register"=>"Register",
+          "logout"=>"Logout"
+      ],
+      "contact_information_about_our_staff"=>"Contact information about our staff",
+      "all_messages"=>"All messages",
+      "details"=>"Details",
+      "we_answer_within_24_hours"=>"We answer within 24 hours",
+      "contact_us"=>"Contact Us",
+      "full_name"=>"Full name",
+      "email"=>"Email",
+      "message_subject"=>"Message subject",
+      "your_avatar"=>"Your avatar",
+      "message"=>"Message",
+      "send_message"=>"Send message",
+      "login"=>"Login",
+      "email_address"=>"Email Address",
+      "password"=>"Password",
+      "remember_me"=>"Remember Me",
+      "forgot_your_password"=>"Forgot Your Password?",
+      "register"=>"Register",
+      "name"=>"Name",
+      "confirm_password"=>"Confirm Password",
+      "verify_your_email_address"=>"Verify Your Email Address",
+      "verification_link"=>"A fresh verification link has been sent to your email address.",
+      "check_your_email"=>"Before proceeding, please check your email for a verification link.If you did not receive the email",
+      "click_here_to_request_another"=>"click here to request another",
+      "verify"=>"Verify",
+      "sign_up"=>"Sign Up",
+      "sign_in"=>"Sign In",
+      "please_confirm_your_password_before_continuing."=>"Please confirm your password before continuing.",
+      "reset_password"=>"Reset Password",
+      "send_password_reset_link"=>"Send Password Reset Link",
+      "search"=>"Search",
+    "not_found" => "Not Found",
+    "set_locale" => "hy",
+    "set_lang" => "Հայ",
+    "current_lang" => "Eng"
+
+];

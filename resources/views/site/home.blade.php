@@ -1,25 +1,18 @@
 @extends('site.layout.default')
 
-@section('title') Home Page @endsection
+@section('title') {{ __('main.Home Page') }} @endsection
 
 @section('content')
     {{--<h1>{{  $test }}</h1>--}}
-    <section class="section py-5 my-5">
+    <section class="section py-5">
         <div class="text-center">
             <small class="font-family-secondary text-uppercase font-weight-bold letter-spacing-caption text-muted">
-                general contractors in new york
+                {{ __('main.general_contractors_in_new_york')}}
             </small>
-            <h1 class="mb-4">PROFI Contractors</h1>
+            <h1 class="mb-4">{{ __('main.profi_contractors') }}</h1>
             <div class="row no-gutters mt-6 mt-md-10 mt-lg-17">
                 <div class="col-12 col-lg-10 offset-0 offset-lg-1">
-                    <p class="fs-5 mb-5">
-                        This is a great space to write long text about your
-                        company and your services. You can use this space to go into a little more detail about your
-                        company. Talk about your team and what services you provide. Tell your visitors the story of how
-                        you
-                        came up with the idea for your business and what makes you different from your competitors. Make
-                        your company stand out and show.
-                    </p>
+                    <p class="fs-5 mb-5">{{ __('main.profi_contractors_text') }}</p>
                 </div>
             </div>
             <div class="row mt-6 mt-md-10 mt-lg-17 vertical-divider-light mb-5">
@@ -83,7 +76,7 @@
             </div>
             <div class="row no-gutters mt-6 mt-md-10 mt-lg-17">
                 <div class="col-12 col-lg-10 offset-0 offset-lg-1">
-                    <p class="fs-5 mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias atque dolores modi natus odit qui ratione? Aperiam aspernatur commodi est provident qui rerum sint sunt suscipit voluptate voluptatum. Cupiditate deleniti eaque exercitationem labore laborum quisquam ut! Blanditiis deserunt dolore, esse et excepturi fugit, impedit optio pariatur, perspiciatis repellendus reprehenderit similique. Aliquam beatae blanditiis dolore et minima minus modi mollitia officia provident sed, sint suscipit tempore voluptates! Accusantium, culpa dignissimos, dolor dolore eaque expedita explicabo, hic libero nemo odio quaerat sed voluptas voluptates. A ad at ducimus earum hic iusto natus necessitatibus nostrum, optio pariatur quidem, reiciendis rerum totam velit veniam.</p>
+                    <p class="fs-5 mb-5">{{ __('main.wildfires_text') }}</p>
                 </div>
             </div>
         </div>

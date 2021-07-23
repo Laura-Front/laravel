@@ -19,8 +19,8 @@
             </div>
             <div class="col-12 col-md-6 text-center text-md-right">
                 <ul class="footer-menu">
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Terms &amp; Conditions</a></li>
+                    <li><a href="#">{{ __('main.footer.privacy_policy') }}</a></li>
+                    <li><a href="#">{{ __('main.footer.terms_&_conditions') }}</a></li>
                 </ul>
             </div>
         </div>

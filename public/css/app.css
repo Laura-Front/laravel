@@ -6,6 +6,10 @@ ul:last-child {
   margin-bottom: 0;
 }
 
+img {
+  max-width: 100%;
+}
+
 .footer .footer-menu {
   list-style: none;
   margin: 0 -1.5625rem;
@@ -57,5 +61,10 @@ ul:last-child {
 
 .footer .brand-icons-list .brand-icon:hover {
   color: #ffc107;
+}
+
+header .nav-link.active {
+  color: #ffc107 !important;
+  font-weight: 600;
 }
 
